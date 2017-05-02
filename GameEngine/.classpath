@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/torum/Desktop/TextLoadProgram.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/PhoneApp.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/basicplayer3.0.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/commons-logging-api.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/GameEngine.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/jl1.0.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/jspeex0.9.7.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/mp3spi1.9.5.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/myid3.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/tritonus_share.jar"/>
+	<classpathentry kind="lib" path="D:/Programing/PhoneApp/PhoneApp/vorbisspi1.0.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
