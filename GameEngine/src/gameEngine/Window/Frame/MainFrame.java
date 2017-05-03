@@ -20,7 +20,6 @@ public class MainFrame extends JFrame {
 	 */
 	public static void main(String[] args) {
 		System.setProperty("file.encording", "UTF-8");
-
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

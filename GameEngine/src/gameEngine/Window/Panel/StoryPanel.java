@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -23,8 +24,11 @@ public class StoryPanel extends JPanel {
 	int WIDTH = SizeManager.getGlobalWidth();
 	int HEIGHT = SizeManager.getGlobalHeight();
 	JTextArea MainTextArea;
+
 	JLabel lblName;
 	Font font;
+	Font namefont;
+	JLabel label;
 	/**
 	 * Create the panel.
 	 */
@@ -32,8 +36,8 @@ public class StoryPanel extends JPanel {
 
 		TextLoadClass TLC =Manager.getInstance().getTLC();
 		try {
-			font  = FontMaker.makeFont(new URL("file:resource/irohamaru-Regular.ttf"),30f);
-
+			font  = FontMaker.makeFont(new URL("file:resource/ipaexg.ttf"),23f);
+			namefont  = FontMaker.makeFont(new URL("file:resource/ipaexg.ttf"),30f);
 
 		} catch (MalformedURLException e) {
 			// TODO 自動生成された catch ブロック
@@ -46,28 +50,40 @@ public class StoryPanel extends JPanel {
 																										MainTextArea.setLineWrap(true);
 																										MainTextArea.setToolTipText("");
 																										MainTextArea.setEditable(false);
-																										MainTextArea.setText(TLC.getLines().get(TLC.nowindex));
 																										MainTextArea.setFont(font);
 																										MainTextArea.setOpaque(false);
-																										MainTextArea.setBounds(110, 560, 1059, 160);
-																										MainTextArea.setMargin(new Insets(15, 70, 5, 10));
+																										MainTextArea.setBounds(110, 540, 1059, 160);
+																										MainTextArea.setMargin(new Insets(0, 50, 5, 10));
 																										MainTextArea.addMouseListener(new PanelClickListener());
+																										MainTextArea.setFocusable(false);
 																										add(MainTextArea);
 
-																lblName = new JLabel("ましろ");
-																lblName.setFont(font);
-																lblName.setBounds(110, 518, 120, 48);
+																lblName = new JLabel(System.getProperty("file.encording"));
+																lblName.setFont(namefont);
+																lblName.setBounds(110, 500, 120, 48);
 																add(lblName);
 
+
+																JButton btnSave = new JButton("Save");
+																btnSave.setBounds(666, 695, 117, 29);
+																add(btnSave);
+
+																JButton btnLoad = new JButton("Load");
+																btnLoad.setBounds(795, 695, 117, 29);
+																add(btnLoad);
+
+																JButton btnTitle = new JButton("Title");
+																btnTitle.setBounds(924, 695, 117, 29);
+																add(btnTitle);
 												JLabel textarea = new JLabel("");
 												textarea.setBounds(102, 487, 1148, 200);
 												textarea.setIcon(PictureBuilder.resizeIcon(new ImageIcon("resource/icon/textarea.png"), 1148, 400));
 												textarea.setOpaque(false);
 												add(textarea);
 
-										JLabel label = new JLabel("");
 
 
+										label  = new JLabel("");
 										label.setVerticalAlignment(SwingConstants.BOTTOM);
 										label.setHorizontalAlignment(SwingConstants.CENTER);
 										label.setIcon(PictureBuilder.resizeIcon(new ImageIcon("resource/BGP/gallery01.jpg"), WIDTH, HEIGHT));
@@ -76,6 +92,10 @@ public class StoryPanel extends JPanel {
 
 	}
 
+
+	 public JLabel getBGP(){
+		 return label;
+	 }
 	public static StoryPanel getInstance(){
 		return instance;
 	}
