@@ -1,7 +1,9 @@
 package gameEngine.Window.Panel;
 
 import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.Insets;
+import java.awt.image.BufferedImage;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -24,7 +26,7 @@ public class StoryPanel extends JPanel {
 	int WIDTH = SizeManager.getGlobalWidth();
 	int HEIGHT = SizeManager.getGlobalHeight();
 	JTextArea MainTextArea;
-
+	public String nowpoint="1-1";
 	JLabel lblName;
 	Font font;
 	Font namefont;
@@ -105,4 +107,26 @@ public class StoryPanel extends JPanel {
 	public JLabel getNameLabel(){
 		return  lblName;
 	}
+
+	//画面キャプチャ機能
+	public BufferedImage getCapture(){
+		int w = getWidth(), h = getHeight();
+
+        BufferedImage image = new BufferedImage( w, h,
+                              BufferedImage.TYPE_INT_RGB );
+
+        Graphics2D g2 = image.createGraphics();
+        paint( g2 );
+        g2.dispose();
+        return image;
+
+	}
+
+
+	public void nextpoint(){
+
+	}
+
+
+
 }

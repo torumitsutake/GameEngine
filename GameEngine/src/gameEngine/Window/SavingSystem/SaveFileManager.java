@@ -24,12 +24,13 @@ public class SaveFileManager {
 		    ObjectInputStream ois = new ObjectInputStream(fis);
 		    SD = (SaveDate) ois.readObject();
 		    ois.close();
-			return true;
 		} catch (Exception e) {
 
 
 			return false;
 		}
+
+		return true;
 	}
 
 	public boolean save(){
@@ -44,12 +45,13 @@ public class SaveFileManager {
 
 
 		}catch (Exception e){
+			return false;
 
 			}
 
 
 
-		return false;
+		return true;
 	}
 
 
